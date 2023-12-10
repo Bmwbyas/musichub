@@ -4,6 +4,20 @@
     "plugin:eslint-plugin-next-on-pages/recommended"
   ],
   "plugins": [
-    "eslint-plugin-next-on-pages"
-  ]
+    "eslint-plugin-next-on-pages",
+    "import"
+  ],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
 }
