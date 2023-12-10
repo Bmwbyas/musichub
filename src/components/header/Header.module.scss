@@ -1,0 +1,19 @@
+@import '@/styles/mixins/mixins';
+
+.header {
+  height: 65px;
+  width: 100%;
+  margin-bottom: 55px;
+  padding: 0 12px;
+  @include flex(row, space-between, center);
+  border-radius: 10px;
+  border: 1px solid $primary-black-color;
+  background: $primary-black-color;
+  color: $primary-white-color;
+  backdrop-filter: blur(19.5px);
+
+  .logo {
+    @include img(175px, 42px);
+    background-image: url("../../../public/img/icon/logo.svg");
+  }
+}

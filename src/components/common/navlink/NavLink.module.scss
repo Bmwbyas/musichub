@@ -1,0 +1,36 @@
+@import "../../../styles/mixins/mixins";
+
+.link {
+  position: relative;
+  padding: 10px 0;
+  @include b2-regular;
+  line-height: 122.023%;
+
+  &:before {
+    transition: opacity 0.2s;
+
+    opacity: 0;
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 1px;
+    background: $primary-white-color;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    text-stroke: 0.5px $primary-white-color;
+    -webkit-text-stroke: 0.5px $primary-white-color;
+
+    &:before {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "../../../styles/mixins/mixins";
+
+.button {
+  height: 42px;
+  @include flex(row, center, center);
+  border-radius: 10px;
+  border: 1px solid $primary-white-color;
+  transition: background-color 0.4s;
+
+  &:hover {
+    transition: background-color ease 0.3s;
+    background-color: $primary-white-color;
+    color: $primary-black-color
+  }
+}
+
+.arrow {
+  width: 209px;
+}
+
+.otherIcon {
+  width: 42px;
+  height: 42px;
+  transition: all 0.3s;
+
+  svg {
+    fill: $primary-white-color;
+  }
+
+  &:hover {
+    transition: background-color 0.3s;
+
+
+    svg {
+      transition: fill 0.3s;
+      fill: $primary-black-color;
+    }
+  }
+}
+
+.searchButton {
+  @extend .otherIcon;
+  @media (max-width: 1070px) {
+    display: none;
+  }
+
+  svg {
+    fill: none;
+    stroke: $primary-white-color;
+  }
+
+  &:hover {
+    svg {
+      fill: none;
+      stroke: $primary-black-color;
+    }
+  }
+}
+
+.iconArrow {
+  @extend .otherIcon;
+  @include flex(row, center, center);
+  background: $primary-white-color;
+  border-radius: 10px;
+
+  svg {
+    fill: $primary-black-color;
+  }
+}
+
+.textButtonArrow {
+  @include b2-regular;
+  line-height: 122.023%;
+  padding-inline: 30px;
+}

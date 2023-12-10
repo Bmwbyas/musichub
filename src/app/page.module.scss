@@ -1,0 +1,7 @@
+@import "@/styles/mixins/mixins";
+
+.main {
+  width: 100%;
+  @include flex(column, flex-start, center);
+  background: aqua;
+}

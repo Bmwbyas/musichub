@@ -1,0 +1,7 @@
+@import '../../../styles/mixins/mixins';
+@import "../../common/button/Button.module";
+
+.container {
+  @include flex(row, flex-start, center);
+  gap: 10px;
+}

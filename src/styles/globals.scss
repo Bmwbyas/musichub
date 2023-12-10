@@ -1,0 +1,18 @@
+@import "variables";
+@import "null";
+@import "mixins/mixins";
+
+body {
+  padding: 35px 50px 0;
+  margin: 0 auto;
+  @include flex(column, center, flex-start);
+  max-width: 1440px;
+  background: $primary-white-color;
+  @include b2-regular;
+  @media (max-width: 960px) {
+    padding: 10px 20px 0;
+  }
+  @media (max-width: 390px) {
+    padding: 10px 10px 0;
+  }
+}

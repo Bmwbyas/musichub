@@ -1,0 +1,21 @@
+@import "../../../styles/mixins/mixins";
+
+.nav {
+  @include flex(row, flex-start, center);
+  gap: 32px;
+}
+
+.desc {
+  @media (max-width: 1070px) {
+    display: none;
+  }
+
+}
+
+.mobile {
+  
+  @media (min-width: 1070px) {
+    display: none;
+  }
+
+}
