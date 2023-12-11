@@ -4,23 +4,29 @@ import styles from './Button.module.scss'
 interface IButton extends ComponentProps<"button"> {
     children: ReactNode
     cl?: string | undefined
-    typeIcon?: 'search' | 'otherIcon' | 'arrow' | undefined
+    typeButton?: 'iconSearch' | 'iconButton' | 'iconArrow' | 'iconClose' | 'social'
 }
 
-const Button: React.FC<IButton> = ({children, cl, typeIcon, ...restProps}): JSX.Element => {
+const Button: React.FC<IButton> = ({children, cl, typeButton, ...restProps}): JSX.Element => {
 
     // eslint-disable-next-line init-declarations
     let classButton: string | undefined
 
-    switch (typeIcon) {
-        case "search":
+    switch (typeButton) {
+        case "iconSearch":
             classButton = styles['button'] + ' ' + styles['searchButton']
             break
-        case "otherIcon":
-            classButton = styles['button'] + ' ' + styles['otherIcon']
+        case "iconButton":
+            classButton = styles['button'] + ' ' + styles['iconButton']
             break
-        case "arrow":
+        case "iconArrow":
             classButton = styles['button'] + ' ' + styles['arrow']
+            break
+        case "iconClose":
+            classButton = styles['button'] + ' ' + styles['close']
+            break
+        case "social":
+            classButton = styles['button'] + ' ' + styles['social']
             break
         default:
             classButton = styles['button']

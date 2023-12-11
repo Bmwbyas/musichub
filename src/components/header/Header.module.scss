@@ -16,4 +16,10 @@
     @include img(175px, 42px);
     background-image: url("../../../public/img/icon/logo.svg");
   }
+
+  .mobile {
+    @media (max-width: 560px) {
+      display: none;
+    }
+  }
 }

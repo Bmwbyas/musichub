@@ -13,7 +13,9 @@
 }
 
 .mobile {
-  
+  @include flex(column, center, flex-start);
+  width: 100%;
+  gap: 0;
   @media (min-width: 1070px) {
     display: none;
   }

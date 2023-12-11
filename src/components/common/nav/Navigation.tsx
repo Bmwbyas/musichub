@@ -4,9 +4,10 @@ import NavLink from "@/components/common/navlink/NavLink";
 
 interface TNav {
     type: 'desc' | 'mobile'
+    close?: (() => void) | undefined
 }
 
-const Navigation: React.FC<TNav> = ({type}): JSX.Element => {
+const Navigation: React.FC<TNav> = ({type, close}): JSX.Element => {
     // eslint-disable-next-line init-declarations
     let classNav: string | undefined
 
@@ -22,7 +23,7 @@ const Navigation: React.FC<TNav> = ({type}): JSX.Element => {
     }
     return (
         <nav className={classNav}>
-            {dataNav.map((el, index) => <NavLink key={index} href={el.href}>{el.text}</NavLink>)}
+            {dataNav.map((el, index) => <NavLink key={index} close={close} href={el.href}>{el.text}</NavLink>)}
         </nav>
     );
 

@@ -14,10 +14,10 @@ const BurgerMenu = (): JSX.Element => {
 
     return (
         <>
-            {!isOpen && <Button cl={styles['button']} typeIcon={"otherIcon"} onClick={open}>
+            <Button cl={styles['button']} disabled={isOpen} typeButton={"iconButton"} onClick={open}>
                 <IconBurger/>
-            </Button>}
-            {isOpen && <Menu close={close}/>}
+            </Button>
+            <Menu isOpen={isOpen} close={close}/>
         </>
     );
 };

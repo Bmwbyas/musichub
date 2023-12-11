@@ -12,18 +12,21 @@ import GroupButton from "@/components/header/groupButton/GroupButton";
 const Header = (): JSX.Element => {
     return (
         <header className={styles['header']}>
+
             <Link href={'/'} className={styles['logo']}/>
+
             <Navigation type={"desc"}/>
 
             <GroupButton>
-                <Button typeIcon={"otherIcon"}><Favorite/></Button>
+                <Button cl={styles['mobile']} typeButton={"iconButton"}><Favorite/></Button>
                 <BurgerMenu/>
-                <Button typeIcon={"search"}><Search/></Button>
-                <Button typeIcon={"arrow"}>
+                <Button typeButton={"iconSearch"}><Search/></Button>
+                <Button cl={styles['mobile']} typeButton={"iconArrow"}>
                     <div className={stylesButton['textButtonArrow']}>Купить песню</div>
                     <div className={stylesButton['iconArrow']}><ArrowRight/></div>
                 </Button>
             </GroupButton>
+
         </header>
     );
 };

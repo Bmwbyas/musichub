@@ -1,17 +1,15 @@
 @import "../variables";
-@import "typography-mixins";
-@import "button-mixins";
+@import "typography";
 
-@mixin img($width,$height){
+@mixin img($width,$height) {
   width: $width;
   height: $height;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
-@mixin flex($dir,$justify,$items){
+@mixin flex($dir,$justify,$items) {
   display: flex;
   flex-direction: $dir;
   justify-content: $justify;

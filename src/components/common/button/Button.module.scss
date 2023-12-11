@@ -2,6 +2,7 @@
 
 .button {
   height: 42px;
+  width: 100%;
   @include flex(row, center, center);
   border-radius: 10px;
   border: 1px solid $primary-white-color;
@@ -12,13 +13,17 @@
     background-color: $primary-white-color;
     color: $primary-black-color
   }
+
+  &:disabled {
+    background-color: transparent;
+  }
 }
 
 .arrow {
   width: 209px;
 }
 
-.otherIcon {
+.iconButton {
   width: 42px;
   height: 42px;
   transition: all 0.3s;
@@ -39,7 +44,7 @@
 }
 
 .searchButton {
-  @extend .otherIcon;
+  @extend .iconButton;
   @media (max-width: 1070px) {
     display: none;
   }
@@ -58,7 +63,7 @@
 }
 
 .iconArrow {
-  @extend .otherIcon;
+  @extend .iconButton;
   @include flex(row, center, center);
   background: $primary-white-color;
   border-radius: 10px;
@@ -72,4 +77,19 @@
   @include b2-regular;
   line-height: 122.023%;
   padding-inline: 30px;
+}
+
+.close {
+  width: 18px;
+  height: 18px;
+  border: none;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.social {
+  width: fit-content;
+  padding: 15px 25px;
 }
