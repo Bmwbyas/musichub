@@ -4,4 +4,17 @@
   width: 100%;
   @include flex(column, flex-start, center);
   background: aqua;
+
+  .h1 {
+    @include h1-regular;
+    max-width: 565px;
+    text-align: center;
+    margin-top: 41px;
+    margin-bottom: 16px;
+  }
+
+  .subTitle {
+    margin-bottom: 55px;
+
+  }
 }

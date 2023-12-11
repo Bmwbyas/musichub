@@ -1,0 +1,12 @@
+@import "../../../styles/mixins/mixins";
+
+.subTitle {
+  @include b2-light;
+  @include flex(row, center, center);
+
+  span {
+    color: $active-color;
+    font-size: 25px;
+    padding-inline: 14px;
+  }
+}
