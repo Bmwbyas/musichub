@@ -1,21 +1,6 @@
-import { createCA, createCert } from 'mkcert';
 import { merge } from 'webpack-merge';
 
 /** @type {import('next').NextConfig} */
-
-const ca = await createCA({
-  organization: 'Hello CA',
-  countryCode: 'NP',
-  state: 'Bagmati',
-  locality: 'Kathmandu',
-  validity: 365,
-});
-
-const cert = await createCert({
-  ca: { key: ca.key, cert: ca.cert },
-  domains: ['127.0.0.1', 'localhost'],
-  validity: 365,
-});
 
 export default {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
@@ -40,12 +25,6 @@ export default {
             use: ['@svgr/webpack'],
           },
         ],
-      },
-      devServer: {
-        https: {
-          key: cert.key,
-          cert: cert.cert,
-        },
       },
     });
   },

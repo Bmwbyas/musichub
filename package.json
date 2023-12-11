@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3001",
+    "dev:ssl": "local-ssl-proxy --key ./certificates/music-hub.key.pem --cert ./certificates/music-hub.cert.pem --source 3000 --target 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -32,6 +33,7 @@
     "eslint-config-next": "14.0.3",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-next-on-pages": "^1.8.2",
+    "local-ssl-proxy": "^2.0.5",
     "prettier": "^3.1.1",
     "typescript": "^5.3.3",
     "vercel": "^32.6.1",
