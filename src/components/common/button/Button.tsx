@@ -4,7 +4,7 @@ import styles from './Button.module.scss'
 interface IButton extends ComponentProps<"button"> {
     children: ReactNode
     cl?: string | undefined
-    typeButton?: 'iconSearch' | 'iconButton' | 'iconArrow' | 'iconClose' | 'social'
+    typeButton?: 'iconSearch' | 'iconButton' | 'iconArrow' | 'iconClose' | 'social' | 'clients'
 }
 
 const Button: React.FC<IButton> = ({children, cl, typeButton, ...restProps}): JSX.Element => {
@@ -27,6 +27,9 @@ const Button: React.FC<IButton> = ({children, cl, typeButton, ...restProps}): JS
             break
         case "social":
             classButton = styles['button'] + ' ' + styles['social']
+            break
+        case "clients":
+            classButton = styles['button'] + ' ' + styles['clients']
             break
         default:
             classButton = styles['button']

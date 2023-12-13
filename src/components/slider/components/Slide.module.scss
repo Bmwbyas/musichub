@@ -1,0 +1,64 @@
+@import "../../../styles/mixins/mixins";
+
+.slideList {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+
+
+  .slide {
+    flex: 1 0 100%;
+    color: $primary-white-color;
+    position: relative;
+
+    span, h3 {
+      color: $active-color
+    }
+
+    .slideContent {
+      padding: 24px;
+      text-align: center;
+      @include h3-regular-slider;
+      @include flex(row, center, center);
+      flex-wrap: wrap;
+
+
+      div {
+        width: 689px;
+        @media (max-width: 830px) {
+          width: 100%;
+
+        }
+      }
+
+    }
+  }
+}
+
+/* DOTS */
+
+.dots {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  margin-bottom: 123px;
+  z-index: 2;
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid $primary-black-color;
+    margin: 0 5px;
+    cursor: pointer;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.selected {
+      background-color: $primary-black-color;
+    }
+  }
+}

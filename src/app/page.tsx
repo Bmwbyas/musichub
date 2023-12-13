@@ -11,7 +11,7 @@ export default function Home(): JSX.Element {
             <h1 className={styles['h1']}>МАРКЕТПЛЕЙС ПЕСЕН </h1>
             <SubTitle cl={styles['subTitle']} text={'аудиоальбом ваших эмоций'}/>
             <Slider/>
-
+            <h2 className={styles['h2']}>НАЙДИТЕ ТУ САМУЮ ПЕСНЮ, КОТОРАЯ СТАНЕТ ЧАСТИЧКОЙ ВАС</h2>
         </main>
     )
 }

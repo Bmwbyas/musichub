@@ -1,6 +1,7 @@
 @import "../../../styles/mixins/mixins";
 
 .button {
+  cursor: pointer;
   height: 42px;
   width: 100%;
   @include flex(row, center, center);
@@ -92,4 +93,11 @@
 .social {
   width: fit-content;
   padding: 15px 25px;
+}
+
+.clients {
+  height: 34px;
+  width: fit-content;
+  gap: 20px;
+  padding-right: 20px;
 }

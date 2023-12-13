@@ -1,9 +1,9 @@
 @import "@/styles/mixins/mixins";
 
 .main {
+  position: relative;
   width: 100%;
   @include flex(column, flex-start, center);
-  background: aqua;
 
   .h1 {
     @include h1-regular;
@@ -11,6 +11,12 @@
     text-align: center;
     margin-top: 41px;
     margin-bottom: 16px;
+  }
+
+  .h2 {
+    @include h2-regular;
+    margin-bottom: 75px;
+    text-align: center;
   }
 
   .subTitle {
