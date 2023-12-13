@@ -1,0 +1,45 @@
+@import "../../../styles/mixins/mixins";
+
+.container {
+  width: fit-content;
+
+  .radio {
+    display: none;
+
+    &:checked + .label {
+      background: $primary-black-color;
+      color: $primary-white-color;
+    }
+
+
+  }
+
+  .label {
+    cursor: pointer;
+    @include flex(row, center, center);
+    color: $primary-black-color;
+    height: 44px;
+
+    padding: 15px calc(20px + (35 - 20) * ((100vw - 921px) / (1342 - 921)));
+    @include b2-regular;
+    border-radius: 10px;
+    border: 1px solid $primary-black-color;
+    transition: background-color 0.4s;
+    white-space: nowrap;
+
+    &:hover {
+      transition: background-color ease 0.3s;
+      background-color: $primary-black-color;
+      color: $primary-white-color;
+    }
+
+    &:active {
+      background-color: $primary-white-color;
+    }
+
+
+    &:disabled {
+      background-color: transparent;
+    }
+  }
+}

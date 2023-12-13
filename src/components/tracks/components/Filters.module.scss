@@ -1,0 +1,7 @@
+@import "../../../styles/mixins/mixins";
+
+.container {
+  @include flex(row, space-between, center);
+  max-width: 1342px;
+  width: 100%;
+}
